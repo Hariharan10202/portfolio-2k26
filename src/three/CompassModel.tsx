@@ -57,7 +57,6 @@ export default function CompassModel() {
             key={label}
             className="absolute text-xs font-black"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color,
               transform: `rotate(${angle}deg) translateY(-72px) rotate(-${angle}deg)`,
               fontSize: "11px",

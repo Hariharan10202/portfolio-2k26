@@ -1,4 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/chinese-rocks");
+@import url("https://fonts.cdnfonts.com/css/cormorant-garamond?styles=170540,19409,170533,19404,170531,19407,170534,19408,170539,19410,170538,19411,170536,19402,170535,19403");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -209,6 +210,10 @@
   font-family: "Chinese Rocks Rg", sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+.western-content {
+  font-family: "IM Fell English", sans-serif;
 }
 
 .western-subtitle {

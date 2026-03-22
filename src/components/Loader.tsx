@@ -64,7 +64,6 @@ export default function Loader({ onComplete }: LoaderProps) {
           <h1
             className="text-5xl md:text-7xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 40px rgba(194, 103, 42, 0.6)",
             }}

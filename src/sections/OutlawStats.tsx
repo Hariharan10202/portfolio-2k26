@@ -64,7 +64,7 @@ function StatBar({ stat, inView }: { stat: Stat; inView: boolean }) {
   return (
     <div className="mb-6">
       <div className="flex items-center justify-between mb-2">
-        <span className="western-subtitle text-[#d4b896] text-xs tracking-[0.15em]">
+        <span className="western-content text-[#d4b896] text-xs font-semibold">
           {stat.label.toUpperCase()}
         </span>
         <span className="western-subtitle text-[#c2672a] text-xs">
@@ -90,10 +90,7 @@ function StatBar({ stat, inView }: { stat: Stat; inView: boolean }) {
         />
       </div>
 
-      <p
-        className="text-[#8b6914] text-xs mt-1 tracking-wide"
-        style={{ fontFamily: "'Chinese Rocks Rg', serif", fontStyle: "italic" }}
-      >
+      <p className="text-[#8b6914] text-sm mt-1 tracking-wide italic western-content font-bold">
         {stat.description}
       </p>
     </div>
@@ -128,7 +125,6 @@ export default function OutlawStats() {
           <h2
             className="text-4xl md:text-5xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 30px rgba(194,103,42,0.3)",
             }}
@@ -164,14 +160,11 @@ export default function OutlawStats() {
           >
             <div className="flex items-center gap-6">
               <div>
-                <h3
-                  className="text-xl font-black tracking-widest text-[#d4b896]"
-                  style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-                >
+                <h3 className="text-xl font-black tracking-widest text-[#d4b896]">
                   Hariharan
                 </h3>
                 <p className="western-subtitle text-[#c2672a] text-xs tracking-[0.2em] mt-1">
-                  SOFTWARE ENGINEER ✦ CLASS: ARCHITECT
+                  SOFTWARE ENGINEER ✦ CLASS: DEVELOPER
                 </p>
                 <div className="flex gap-4 mt-2">
                   <span className="text-[#8b6914] text-xs">
@@ -192,10 +185,7 @@ export default function OutlawStats() {
                   <div className="western-subtitle text-[#c9942a] text-xs tracking-widest">
                     BOUNTY
                   </div>
-                  <div
-                    className="text-xl font-black text-[#c2672a]"
-                    style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-                  >
+                  <div className="text-xl font-black text-[#c2672a]">
                     $1,000,000
                   </div>
                 </div>

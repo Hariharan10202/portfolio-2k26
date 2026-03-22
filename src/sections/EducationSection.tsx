@@ -21,7 +21,6 @@ export default function EducationSection() {
           <h2
             className="text-4xl md:text-5xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 30px rgba(194,103,42,0.3)",
             }}
@@ -29,9 +28,9 @@ export default function EducationSection() {
             EDUCATION
           </h2>
           <div className="flex items-center justify-center gap-4 mt-6">
-            <div className="h-px w-24 bg-gradient-to-r from-transparent to-[#c2672a]" />
+            <div className="h-px w-24 bg-linear-to-r from-transparent to-[#c2672a]" />
             <span className="text-[#c2672a]">✦</span>
-            <div className="h-px w-24 bg-gradient-to-r from-[#c2672a] to-transparent" />
+            <div className="h-px w-24 bg-linear-to-r from-[#c2672a] to-transparent" />
           </div>
         </motion.div>
 
@@ -64,7 +63,7 @@ export default function EducationSection() {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             {/* Icon */}
             <div
-              className="w-20 h-20 flex items-center justify-center text-4xl flex-shrink-0 rounded-sm"
+              className="w-20 h-20 flex items-center justify-center text-4xl shrink-0 rounded-sm"
               style={{
                 background:
                   "linear-gradient(135deg, rgba(122,26,26,0.4), rgba(74,44,26,0.3))",
@@ -75,10 +74,7 @@ export default function EducationSection() {
             </div>
 
             <div className="flex-1 text-center md:text-left">
-              <h3
-                className="text-xl md:text-2xl font-black tracking-wider text-[#d4b896] mb-2"
-                style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-              >
+              <h3 className="text-xl md:text-2xl font-black tracking-wider text-[#d4b896] mb-2">
                 BACHELOR OF COMPUTER SCIENCE & ENGINEERING
               </h3>
 
@@ -98,10 +94,7 @@ export default function EducationSection() {
                     border: "1px solid rgba(194,103,42,0.4)",
                   }}
                 >
-                  <div
-                    className="text-2xl font-black text-[#c2672a] mb-1"
-                    style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-                  >
+                  <div className="text-2xl font-black text-[#c2672a] mb-1">
                     8.1
                   </div>
                   <div className="western-subtitle text-[#8b6914] text-xs tracking-widest">
@@ -111,10 +104,7 @@ export default function EducationSection() {
 
                 <div className="flex items-center">
                   <div>
-                    <p
-                      className="text-[#d4b896] text-sm italic"
-                      style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-                    >
+                    <p className="text-[#d4b896] text-base italic western-content">
                       "Forged in the fires of algorithm theory and systems
                       design. Every problem a frontier, every solution a trail
                       blazed."

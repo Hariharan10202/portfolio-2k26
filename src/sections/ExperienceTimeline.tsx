@@ -23,14 +23,14 @@ const experiences: Experience[] = [
       "Recharts",
       "Prisma",
       "tRPC",
-      "PostgreSQL",
+      "MySQL",
     ],
     achievements: [
       "Built and scaled multiple production platforms (Health Dashboard, Talent Hiring, eCommerce) serving 5K+ MAU",
       "Developed interactive dashboards for client health metrics with dynamic widgets, filters, and goal tracking",
       "Engineered scalable frontend architecture in a Turborepo monorepo with reusable UI components",
-      "Built calendar UI from scratch with slot rendering, create/edit flows, and real-time API integration",
-      "Developed full-stack eCommerce platform with pagination/infinite scroll, CRUD operations, and workflow automation",
+      "Built a full-page calendar UI similar to Google Calendar, with slot rendering, create/edit flows, and real-time API integration",
+      "Developed full-stack eCommerce platform with pagination/infinite scroll, CRUD operations",
     ],
     keyAchievement:
       "Drove end-to-end development of multiple production systems, improving performance and delivery speed while supporting 5K+ active users.",
@@ -38,7 +38,7 @@ const experiences: Experience[] = [
   {
     role: "Software Engineer",
     company: "Freightify",
-    period: "Jun 2022 – Dec 2023",
+    period: "Jul 2022 – Dec 2023",
     stack: ["React", "Next.js", "TypeScript", "Tailwind", "Redux"],
     achievements: [
       "Built a custom Design System from scratch to standardize UI and reduce development time by 30–40%",
@@ -90,10 +90,7 @@ function ExperienceCard({
         {/* Header */}
         <div className="mb-4">
           <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-            <h3
-              className="text-base font-black tracking-wider text-[#d4b896]"
-              style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-            >
+            <h3 className="text-base font-black tracking-wider text-[#d4b896]">
               {exp.role}
             </h3>
             <div
@@ -135,10 +132,7 @@ function ExperienceCard({
           {exp.achievements.map((a, i) => (
             <div key={i} className="flex items-start gap-2">
               <span className="text-[#c2672a] text-xs mt-0.5 shrink-0">✦</span>
-              <p
-                className="text-[#d4b896] text-sm leading-relaxed"
-                style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-              >
+              <p className="text-[#d4b896] text-sm leading-relaxed tracking-wide western-content">
                 {a}
               </p>
             </div>
@@ -156,10 +150,7 @@ function ExperienceCard({
           <p className="western-subtitle text-[#c2672a] text-xs tracking-[0.2em] mb-2">
             ★ KEY ACHIEVEMENT ★
           </p>
-          <p
-            className="text-[#d4b896] text-sm italic leading-relaxed"
-            style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-          >
+          <p className="text-[#d4b896] text-sm italic leading-relaxed tracking-wide western-content">
             {exp.keyAchievement}
           </p>
         </div>
@@ -196,7 +187,6 @@ export default function ExperienceTimeline() {
           <h2
             className="text-4xl md:text-5xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 30px rgba(194,103,42,0.3)",
             }}

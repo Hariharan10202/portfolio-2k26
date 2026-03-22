@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 const traits = [
   { icon: "⚡", label: "Performance Engineering" },
   { icon: "🏗️", label: "Scalable Architecture" },
-  { icon: "🔧", label: "Production Systems" },
+  { icon: "🧩", label: "UI Systems & Design Systems" },
   { icon: "📊", label: "Data Structures & Algorithms" },
 ];
 
@@ -37,7 +37,6 @@ export default function AboutSection() {
           <h2
             className="text-4xl md:text-5xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 30px rgba(194,103,42,0.3)",
             }}
@@ -45,9 +44,9 @@ export default function AboutSection() {
             ABOUT THE OUTLAW
           </h2>
           <div className="flex items-center justify-center gap-4 mt-6">
-            <div className="h-px w-24 bg-gradient-to-r from-transparent to-[#c2672a]" />
+            <div className="h-px w-24 bg-linear-to-r from-transparent to-[#c2672a]" />
             <span className="text-[#c2672a]">✦</span>
-            <div className="h-px w-24 bg-gradient-to-r from-[#c2672a] to-transparent" />
+            <div className="h-px w-24 bg-linear-to-r from-[#c2672a] to-transparent" />
           </div>
         </motion.div>
 
@@ -80,38 +79,57 @@ export default function AboutSection() {
                 ★ CHARACTER PROFILE ★
               </p>
 
-              <p
-                className="text-[#d4b896] text-base leading-relaxed mb-6"
-                style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-              >
-                A seasoned Software Engineer with{" "}
-                <span className="text-[#c9942a] font-semibold">3.5+ years</span>{" "}
-                riding the digital frontier — building scalable web applications
-                using{" "}
-                <span className="text-[#c9942a]">React, Next.js, Node.js</span>{" "}
-                and <span className="text-[#c9942a]">TypeScript</span>.
-              </p>
+              <div style={{ fontFamily: "'IM Fell English', serif" }}>
+                <p className="text-[#d4b896] text-sm leading-relaxed mb-6">
+                  A Software Engineer with{" "}
+                  <span className="text-[#c9942a] font-semibold">
+                    3.5+ years
+                  </span>{" "}
+                  on the frontier — building and scaling{" "}
+                  <span className="text-[#c9942a]">
+                    production-grade platforms
+                  </span>{" "}
+                  across{" "}
+                  <span className="text-[#c9942a]">
+                    health, talent, and eCommerce
+                  </span>{" "}
+                  using{" "}
+                  <span className="text-[#c9942a]">
+                    React, Next.js, Node.js
+                  </span>{" "}
+                  and <span className="text-[#c9942a]">TypeScript</span>.
+                </p>
 
-              <p
-                className="text-[#d4b896] text-base leading-relaxed mb-6"
-                style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-              >
-                Known for delivering production features for high-traffic
-                platforms with{" "}
-                <span className="text-[#c9942a] font-semibold">
-                  5K+ monthly active users
-                </span>
-                , and establishing architectural patterns that improve developer
-                velocity and system reliability.
-              </p>
+                <p className="text-[#d4b896] text-sm leading-relaxed mb-6">
+                  Built systems serving{" "}
+                  <span className="text-[#c9942a] font-semibold">
+                    5K+ users
+                  </span>
+                  , crafting{" "}
+                  <span className="text-[#c9942a]">
+                    dashboards, scheduling engines, and full-stack platforms
+                  </span>{" "}
+                  with strong architecture and type-safe flows using{" "}
+                  <span className="text-[#c9942a]">tRPC</span>.
+                </p>
 
-              <p
-                className="text-[#8b6914] text-sm leading-relaxed italic"
-                style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-              >
-                "Every line of code tells a story. Every system built leaves a
-                legacy on the frontier."
-              </p>
+                <p className="text-[#d4b896] text-sm leading-relaxed">
+                  Known for building from the ground up — from{" "}
+                  <span className="text-[#c9942a]">
+                    design systems and monorepos
+                  </span>{" "}
+                  to{" "}
+                  <span className="text-[#c9942a]">
+                    optimized backend integrations
+                  </span>
+                  , delivering fast, scalable, and reliable systems.
+                </p>
+
+                <p className="text-[#8b6914] text-sm leading-relaxed italic western-content">
+                  "Every line of code tells a story. Every system built leaves a
+                  legacy on the frontier."
+                </p>
+              </div>
             </div>
           </motion.div>
 
@@ -141,8 +159,8 @@ export default function AboutSection() {
                 }}
               >
                 <div className="text-2xl mb-3">{trait.icon}</div>
-                <p className="western-subtitle text-[#c2672a] text-xs tracking-[0.15em] leading-relaxed">
-                  {trait.label.toUpperCase()}
+                <p className="uppercase text-[#c2672a] text-xs tracking-wide leading-relaxed">
+                  {trait.label}
                 </p>
               </motion.div>
             ))}
@@ -161,15 +179,12 @@ export default function AboutSection() {
             >
               <div className="grid grid-cols-3 gap-4 text-center">
                 {[
-                  { value: "3.5+", label: "Years" },
-                  { value: "5K+", label: "MAU" },
-                  { value: "3", label: "Platforms" },
+                  { value: "3.5+", label: "Years Riding" },
+                  { value: "5+", label: "Core Technologies" },
+                  { value: "∞", label: "Bugs Hunted" },
                 ].map((s) => (
                   <div key={s.label}>
-                    <div
-                      className="text-2xl font-black text-[#c2672a] mb-1"
-                      style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-                    >
+                    <div className="text-2xl font-black text-[#c2672a] mb-1">
                       {s.value}
                     </div>
                     <div className="western-subtitle text-[#8b6914] text-xs tracking-widest">

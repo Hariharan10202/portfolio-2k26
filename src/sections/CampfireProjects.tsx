@@ -14,20 +14,23 @@ interface Project {
 const projects: Project[] = [
   {
     title: "AlignAI",
-    stack: ["Python", "FastAPI", "NLP", "LangChain", "React", "Next.js", "LLM"],
+    stack: ["Python", "FastAPI", "React", "Next.js", "LLM"],
     description:
-      "AI-powered resume–job description matching system generating explainable match scores and identifying skill gaps.",
+      "AI-powered resume–job description matching system that generates explainable match scores, identifies skill gaps, and provides structured improvement suggestions for both candidates and recruiters.",
     features: [
-      "Resume parsing with NLP extraction",
-      "Semantic skill gap analysis",
-      "Explainable match scoring",
-      "Recruiter insights dashboard",
+      "Extracts contents from resumes and job descriptions automatically",
+      "Feeds data into LLM to analyze and identify gaps and matched skills",
+      "Provides multi-layered insights: ATS score, matched skills, missing skills, section-wise analysis, and prioritized improvements",
+      "Gives candidates clear, actionable steps to improve their resumes",
+      "Helps recruiters interpret candidate suitability and shortlist effectively",
+      "Structured and detailed explanation rather than vague suggestions",
+      "Shows section-wise gaps so candidates can restructure resumes intelligently",
+      "Delivers recommendations and improvement suggestions with priority guidance",
     ],
-    github: "https://github.com",
+    live: "https://align-ai-hariharan10202s-projects.vercel.app/",
     icon: "🤖",
   },
 ];
-
 function AnimatedCampfire() {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center relative">
@@ -337,10 +340,7 @@ function ProjectCard({
           <div className="flex items-center gap-4 mb-4">
             <span className="text-3xl">{project.icon}</span>
             <div>
-              <h3
-                className="text-lg font-black tracking-wider text-[#d4b896]"
-                style={{ fontFamily: "'Chinese Rocks Rg', serif" }}
-              >
+              <h3 className="text-lg font-black tracking-wider text-[#d4b896]">
                 {project.title.toUpperCase()}
               </h3>
               <p className="western-subtitle text-[#8b6914] text-xs tracking-wider mt-0.5">
@@ -392,26 +392,20 @@ function ProjectCard({
                 style={{ borderTop: "1px solid rgba(194,103,42,0.2)" }}
               >
                 {/* Description */}
-                <p
-                  className="text-[#d4b896] text-sm leading-relaxed mb-5"
-                  style={{
-                    fontFamily: "'Chinese Rocks Rg', serif",
-                    fontStyle: "italic",
-                  }}
-                >
+                <p className="text-[#d4b896] text-base leading-relaxed mb-5 italic western-content">
                   "{project.description}"
                 </p>
 
                 {/* Features */}
                 <div className="mb-5">
-                  <p className="western-subtitle text-[#c2672a] text-xs tracking-[0.2em] mb-3">
+                  <p className="text-[#c2672a] text-xs tracking-[0.2em] mb-3">
                     — MISSION OBJECTIVES —
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {project.features.map((f, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <span className="text-[#c2672a] text-xs mt-0.5">✦</span>
-                        <p className="text-[#d4b896] text-xs leading-relaxed">
+                        <p className="text-[#d4b896] text-xs western-content leading-relaxed">
                           {f}
                         </p>
                       </div>
@@ -489,7 +483,6 @@ export default function CampfireProjects() {
           <h2
             className="text-4xl md:text-5xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 30px rgba(194,103,42,0.3)",
             }}
@@ -501,13 +494,7 @@ export default function CampfireProjects() {
             <span className="text-[#c2672a]">✦</span>
             <div className="h-px w-24 bg-linear-to-r from-[#c2672a] to-transparent" />
           </div>
-          <p
-            className="text-[#8b6914] text-sm mt-4 max-w-md mx-auto"
-            style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
-              fontStyle: "italic",
-            }}
-          >
+          <p className="text-[#8b6914] text-sm mt-4 max-w-md mx-auto western-content italic">
             "Gather 'round the fire, stranger. Let me tell you about the trails
             I've ridden..."
           </p>

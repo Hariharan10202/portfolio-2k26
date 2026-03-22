@@ -16,6 +16,7 @@ const skillCategories = [
       "Tailwind CSS",
       "Redux",
       "Context API",
+      "Recharts",
       "HTML",
       "CSS",
     ],
@@ -23,7 +24,7 @@ const skillCategories = [
   {
     category: "Backend",
     icon: "⚙️",
-    skills: ["Node.js", "REST APIs", "tRPC", "Fast API"],
+    skills: ["Node.js", "REST APIs", "tRPC", "FastAPI"],
   },
   {
     category: "Databases",
@@ -31,14 +32,14 @@ const skillCategories = [
     skills: ["MySQL", "MongoDB", "Prisma ORM"],
   },
   {
-    category: "AI & Applied",
-    icon: "🤖",
-    skills: ["NLP", "Resume Matching", "RAG", "LangChain"],
+    category: "Tools & Workflow",
+    icon: "🔧",
+    skills: ["Git", "Turborepo"],
   },
   {
-    category: "Tools & Infra",
-    icon: "🔧",
-    skills: ["GitHub"],
+    category: "Core Concepts",
+    icon: "🧠",
+    skills: ["Data Structures & Algorithms", "System Design"],
   },
 ];
 
@@ -70,7 +71,6 @@ export default function SkillsSection() {
           <h2
             className="text-4xl md:text-5xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 30px rgba(194,103,42,0.3)",
             }}
@@ -107,7 +107,7 @@ export default function SkillsSection() {
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-2xl">{cat.icon}</span>
                 <div>
-                  <p className="western-subtitle text-[#c2672a] text-xs tracking-[0.2em]">
+                  <p className="western-subtitle text-[#c2672a] text-sm">
                     {cat.category.toUpperCase()}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ export default function SkillsSection() {
                   <motion.span
                     key={skill}
                     whileHover={{ scale: 1.05 }}
-                    className="px-3 py-1 text-xs western-subtitle tracking-wider transition-all duration-300 cursor-default"
+                    className="px-3 py-1 text-xs western-content font-bold tracking-wider transition-all duration-300 cursor-default"
                     style={{
                       background: "rgba(74,44,26,0.3)",
                       border: "1px solid rgba(194,103,42,0.25)",

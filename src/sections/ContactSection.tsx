@@ -20,26 +20,20 @@ const links = [
   {
     icon: "💼",
     label: "LINKEDIN",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/hariharan-t-1447ba210/",
     description: "Professional network",
   },
   {
     icon: "💻",
     label: "GITHUB",
-    href: "https://github.com",
+    href: "https://github.com/Hariharan10202",
     description: "Code repository",
   },
   {
     icon: "⚔️",
     label: "LEETCODE",
-    href: "https://leetcode.com",
+    href: "https://leetcode.com/u/hariharanstriver/",
     description: "Algorithm duels",
-  },
-  {
-    icon: "🌐",
-    label: "PORTFOLIO",
-    href: "#",
-    description: "This very frontier",
   },
 ];
 
@@ -71,7 +65,6 @@ export default function ContactSection() {
           <h2
             className="text-4xl md:text-5xl font-black tracking-widest"
             style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
               color: "#d4b896",
               textShadow: "0 0 30px rgba(194,103,42,0.3)",
             }}
@@ -79,17 +72,11 @@ export default function ContactSection() {
             CONTACT
           </h2>
           <div className="flex items-center justify-center gap-4 mt-6">
-            <div className="h-px w-24 bg-gradient-to-r from-transparent to-[#c2672a]" />
+            <div className="h-px w-24 bg-linear-to-r from-transparent to-[#c2672a]" />
             <span className="text-[#c2672a]">✦</span>
-            <div className="h-px w-24 bg-gradient-to-r from-[#c2672a] to-transparent" />
+            <div className="h-px w-24 bg-linear-to-r from-[#c2672a] to-transparent" />
           </div>
-          <p
-            className="text-[#8b6914] text-sm mt-4 max-w-md mx-auto"
-            style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
-              fontStyle: "italic",
-            }}
-          >
+          <p className="text-[#8b6914] text-base mt-4 max-w-md mx-auto italic western-content">
             "The frontier is vast, but word travels fast. Send a telegram and I
             shall respond in haste."
           </p>
@@ -109,50 +96,52 @@ export default function ContactSection() {
 
             <div className="flex flex-col gap-4 mb-8">
               {contacts.map((c, i) => (
-                <motion.a
+                <motion.div
                   key={c.label}
-                  href={c.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
                   className="contact-card p-5 flex items-center gap-4 group"
-                  style={{ textDecoration: "none" }}
-                  whileHover={{ x: 4 }}
                 >
                   <span className="text-2xl">{c.icon}</span>
                   <div>
-                    <p className="western-subtitle text-[#8b6914] text-xs tracking-widest mb-1">
+                    <p className="western-content text-[#8b6914] text-xs tracking-wide mb-1">
                       {c.label}
                     </p>
-                    <p className="text-[#d4b896] text-sm group-hover:text-[#c2672a] transition-colors break-all">
+                    <a
+                      href={c.href}
+                      className="western-subtitle text-[#d4b896] text-sm group-hover:text-[#c2672a] break-all"
+                    >
                       {c.value}
-                    </p>
+                    </a>
                   </div>
                   <span className="ml-auto text-[#c2672a] opacity-0 group-hover:opacity-100 transition-opacity">
                     →
                   </span>
-                </motion.a>
+                </motion.div>
               ))}
             </div>
 
             {/* CTA */}
-            <motion.a
-              href="mailto:hariharan10202@gmail.com"
+            <motion.div
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
-              className="inline-block px-8 py-4 text-xs western-subtitle tracking-[0.2em] transition-all duration-300 hover:scale-105"
-              style={{
-                background: "linear-gradient(135deg, #7a1a1a, #c2672a)",
-                border: "1px solid #c9942a",
-                color: "#d4b896",
-                boxShadow: "0 0 20px rgba(194, 103, 42, 0.3)",
-                textDecoration: "none",
-              }}
-              whileHover={{ scale: 1.05 }}
             >
-              ★ HIRE THE OUTLAW ★
-            </motion.a>
+              <a
+                href="mailto:hariharan10202@gmail.com"
+                className="inline-block px-8 py-4 text-xs western-subtitle tracking-[0.2em] transition-all duration-300 hover:scale-105"
+                style={{
+                  background: "linear-gradient(135deg, #7a1a1a, #c2672a)",
+                  border: "1px solid #c9942a",
+                  color: "#d4b896",
+                  boxShadow: "0 0 20px rgba(194, 103, 42, 0.3)",
+                  textDecoration: "none",
+                }}
+              >
+                ★ HIRE THE OUTLAW ★
+              </a>
+            </motion.div>
           </div>
 
           {/* Social links */}
@@ -181,16 +170,10 @@ export default function ContactSection() {
                   whileHover={{ y: -4 }}
                 >
                   <div className="text-3xl mb-3">{link.icon}</div>
-                  <p className="western-subtitle text-[#c2672a] text-xs tracking-widest mb-1">
+                  <p className="western-content text-[#c2672a] text-xs tracking-wide mb-1">
                     {link.label}
                   </p>
-                  <p
-                    className="text-[#8b6914] text-xs"
-                    style={{
-                      fontFamily: "'Chinese Rocks Rg', serif",
-                      fontStyle: "italic",
-                    }}
-                  >
+                  <p className="text-[#8b6914] text-sm italic western-content">
                     {link.description}
                   </p>
                 </motion.a>

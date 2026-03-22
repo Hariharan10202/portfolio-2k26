@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import CompassModel from "@/three/CompassModel";
 
 export default function HeroSection() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -26,10 +25,6 @@ export default function HeroSection() {
       "-=0.8",
     );
   }, []);
-
-  const scrollTo = (id: string) => {
-    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
@@ -73,7 +68,7 @@ export default function HeroSection() {
 
       <div className="w-full max-w-7xl mx-auto px-6 z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* LEFT: TEXT */}
-        <div className="w-full lg:w-1/2 text-left">
+        <div className="w-full lg:w-1/2 lg:text-left text-center mx-auto">
           {/* Pre-title */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -87,7 +82,7 @@ export default function HeroSection() {
           {/* Main title */}
           <h1
             ref={titleRef}
-            className="western-title cinematic-title leading-none mb-6 flex flex-wrap justify-start gap-3"
+            className="western-title leading-none mb-6 flex flex-wrap justify-center lg:justify-start gap-3"
             style={{
               fontSize: "var(--step-5)",
               color: "#d4b896",
@@ -98,7 +93,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Divider */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-6 justify-center lg:justify-start">
             <div className="h-px flex-1 max-w-16 bg-linear-to-r from-transparent to-[#c2672a]" />
             <span className="text-[#c2672a] text-lg">✦</span>
             <div className="h-px flex-1 max-w-40 bg-linear-to-r from-[#c2672a] to-transparent" />
@@ -119,11 +114,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="text-[#d4b896] text-base leading-relaxed mb-10 max-w-lg"
-            style={{
-              fontFamily: "'Chinese Rocks Rg', serif",
-              fontStyle: "italic",
-            }}
+            className="text-[#d4b896] text-base leading-relaxed mb-10 max-w-lg italic western-content mx-auto lg:mx-0"
           >
             "Building scalable systems with React, Node.js & TypeScript. A lone
             architect forging digital trails through the frontier of modern
@@ -135,28 +126,29 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-4 justify-center lg:justify-start"
           >
             {/* buttons unchanged */}
           </motion.div>
         </div>
 
         {/* RIGHT: TILTED IMAGE */}
-        <div className="hidden lg:flex w-1/2 items-center justify-center relative perspective-[1000px]">
-          <div className="relative flex justify-center -rotate-3 hover:-rotate-1 transition-all duration-500">
-            <img
-              src="/images/poster.png"
-              alt="poster"
-              className="w-[70%] h-auto object-contain brightness-75"
+        <div className="hidden lg:block w-1/2 relative perspective-[1000px]">
+          <div className="relative flex justify-center -rotate-3 transition-all duration-500">
+            <div
+              className="w-[60%] aspect-2/3 bg-center bg-contain bg-no-repeat brightness-75"
               style={{
+                backgroundImage: "url('/images/poster.png')",
                 WebkitMaskImage: `
-    radial-gradient(circle at 30% 30%, black 60%, transparent 100%),
-    radial-gradient(circle at 70% 40%, black 65%, transparent 100%),
-    radial-gradient(circle at 40% 80%, black 60%, transparent 100%),
-    linear-gradient(black, black)
-  `,
-                WebkitMaskComposite: "destination-in",
-                maskComposite: "intersect",
+                  radial-gradient(circle at 40% 40%, black 20%, transparent 100%),
+
+                  radial-gradient(circle at 10% 10%, black 1%, transparent 10%),
+                  radial-gradient(circle at 10% 10%, black 5%, transparent 19%),
+                  radial-gradient(circle at 10% 10%, black 7%, transparent 10%),
+                  radial-gradient(circle at 10% 10%, black 6%, transparent 6%)
+                `,
+                WebkitMaskComposite: "add",
+                maskComposite: "add",
               }}
             />
           </div>
