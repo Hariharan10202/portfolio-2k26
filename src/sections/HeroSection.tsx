@@ -26,6 +26,10 @@ export default function HeroSection() {
     );
   }, []);
 
+  const scrollTo = (id: string) => {
+    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="hero"
@@ -121,14 +125,52 @@ export default function HeroSection() {
             web."
           </motion.p>
 
-          {/* CTA */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
             className="flex flex-wrap gap-4 justify-center lg:justify-start"
           >
-            {/* buttons unchanged */}
+            <button
+              type="button"
+              onClick={() => scrollTo("#projects")}
+              className="px-8 py-3 text-xs western-subtitle tracking-[0.2em] transition-all duration-300 hover:scale-105"
+              style={{
+                background: "linear-gradient(135deg, #7a1a1a, #c2672a)",
+                border: "1px solid #c9942a",
+                color: "#d4b896",
+                boxShadow: "0 0 20px rgba(194, 103, 42, 0.3)",
+              }}
+            >
+              VIEW PROJECTS
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollTo("#contact")}
+              className="px-8 py-3 text-xs western-subtitle tracking-[0.2em] transition-all duration-300 hover:scale-105"
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(194, 103, 42, 0.4)",
+                color: "#c2672a",
+              }}
+            >
+              CONTACT ME
+            </button>
+            <a
+              href="/Hariharan - Software Engineer.pdf.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 text-xs western-subtitle tracking-[0.2em] transition-all duration-300 hover:scale-105"
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(139, 105, 20, 0.4)",
+                color: "#8b6914",
+              }}
+            >
+              DOWNLOAD RESUME
+            </a>
           </motion.div>
         </div>
 
