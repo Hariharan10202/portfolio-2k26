@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { yearsOfExperience } from "@/lib/utils";
 
 interface Stat {
   label: string;
@@ -170,7 +171,9 @@ export default function OutlawStats() {
                   <span className="text-[#8b6914] text-xs">
                     📍 ERODE, INDIA
                   </span>
-                  <span className="text-[#8b6914] text-xs">⚔️ 3.5+ YEARS</span>
+                  <span className="text-[#8b6914] text-xs">
+                    ⚔️ {yearsOfExperience()}+ YEARS
+                  </span>
                 </div>
               </div>
 

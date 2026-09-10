@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import { yearsOfExperience } from "@/lib/utils";
 
 export default function HeroSection() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -111,7 +112,7 @@ export default function HeroSection() {
           </p>
 
           <p className="text-[#c2672a] text-xs tracking-[0.15em] western-subtitle mb-8">
-            ERODE, INDIA ✦ 3.5+ YEARS
+            ERODE, INDIA ✦ {yearsOfExperience()}+ YEARS
           </p>
 
           <motion.p

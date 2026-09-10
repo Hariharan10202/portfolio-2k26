@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { yearsOfExperience } from "@/lib/utils";
 
 const traits = [
   { icon: "⚡", label: "Performance Engineering" },
@@ -83,7 +84,7 @@ export default function AboutSection() {
                 <p className="text-[#d4b896] text-sm leading-relaxed mb-6">
                   A Software Engineer with{" "}
                   <span className="text-[#c9942a] font-semibold">
-                    3.5+ years
+                    {yearsOfExperience()}+ years
                   </span>{" "}
                   on the frontier — building and scaling{" "}
                   <span className="text-[#c9942a]">
@@ -179,7 +180,7 @@ export default function AboutSection() {
             >
               <div className="grid grid-cols-3 gap-4 text-center">
                 {[
-                  { value: "3.5+", label: "Years Riding" },
+                  { value: ` ${yearsOfExperience()}+`, label: "Years Riding" },
                   { value: "5+", label: "Core Technologies" },
                   { value: "∞", label: "Bugs Hunted" },
                 ].map((s) => (
